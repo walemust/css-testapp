@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* overflow: hidden; */
+}
+
+body {
+    background-image: url(/images/bg-mobile.png);
+    font-size: 14px;
+    font-family: 'Raleway',
+        sans-serif;
+}
+
+.header {
+    margin-top: 10rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding: 3rem;
+    background-color: hsl(228, 56%, 26%);
+    border: 1px solid hsl(228, 56%, 26%);
+    border-radius: 4% 40% 4% 4%;
+}
+
+.logo {
+    margin-top: 0.3rem;
+}
+
+.details img {
+    margin-right: 1rem;
+    margin-top: 2rem;
+    padding: 0.5rem;
+    background-color: hsl(229, 57%, 11%);
+    border-radius: 5px;
+}
+
+.stats {
+    margin-top: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding: 2rem;
+    background-color: hsl(228, 56%, 26%);
+    border: 1px solid hsl(228, 56%, 26%);
+    border-radius: 5px;
+    font-weight: 700;
+    color: hsl(229, 7%, 55%);
+}
+
+.progressinfo {
+    font-size: 13px;
+    margin: 0.5rem;
+}
+
+.progressgauge {
+    display: flex;
+    width: 15rem;
+    justify-content: space-between;
+}
+
+
+/* progress {
+    display: flex;
+    width: auto;
+    height: 1.5rem;
+    margin: 0px auto 5px auto;
+    background: hsl(229, 57%, 11%);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+} */
+
+
+progress[value] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* progress:not([value]) {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+} */
+
+progress::-webkit-progress-bar {
+    display: flex;
+    width: 15rem;
+    height: 0.7rem;
+    margin: 0px auto 5px auto;
+    background: hsl(229, 57%, 11%);
+    border-radius: 5px;
+}
+
+progress::-webkit-progress-value {
+    background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    border-radius: 5px;
+}
+
+.dataleft {
+    display: flex;
+    position: relative;
+    margin-top: -20px;
+    justify-content: center;
+    background-color: white;
+    width: 10rem;
+    border-radius: 10px;
+    margin-left: 6rem;
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    align-items: center;
+}
+
+.dataleftfig {
+    font-size: 2rem;
+    font-weight: 700;
+    color: hsl(229, 57%, 11%);
+}
+
+.dataleftinfo {
+    font-weight: 700;
+    margin-left: 0.5rem;
+    color: hsl(229, 7%, 55%);
+}
+
+
+/* progress {
+    background: hsl(229, 57%, 11%);
+    border-radius: 3px;
+    width: 500px;
+    margin: 0px auto;
+    max-width: 500px;
+    height: 30px;
+} */
+
+/* progress::-moz-progress-value {
+    background: linear-gradient(hsl(6, 100%, 80%) to hsl(335, 100%, 65%));
+    border-radius: 3px;
+} */
+
+@media screen and (max-width: 2560px) and (min-width: 768px) {
+    body {
+        background-image: url('/images/bg-desktop.png');
+        background-color: hsl(229, 57%, 11%);
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: contain;
+        background-clip: content-box;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        margin-top: 5.4rem;
+    }
+
+    .header {
+        padding-right: 8rem;
+        margin-left: 15rem;
+        margin-bottom: 22rem;
+        margin-top: 12rem;
+    }
+
+    .stats {
+        margin-top: 16rem;
+        padding-right: 14rem;
+        margin-bottom: 22rem;
+    }
+
+    progress::-webkit-progress-bar {
+        display: flex;
+        width: 26rem;
+        height: 0.7rem;
+        margin: 0px auto 5px auto;
+        background: hsl(229, 57%, 11%);
+        border-radius: 5px;
+    }
+
+    progress::-webkit-progress-value {
+        background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+        border-radius: 5px;
+    }
+
+    .dataleft {
+        position: relative;
+        left: -21rem;
+        margin-bottom: 30rem;
+        margin-top: 14rem;
+        border-radius: 10px 10px 0px 25px;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 84% 74%, 0 74%, 0 75%, 0% 75%);
+    }
+}
